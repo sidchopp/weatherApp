@@ -1,16 +1,19 @@
 import React from 'react';
-import { Card, Icon, Image, Button } from 'semantic-ui-react'
+import { Card, Icon, Image, Header } from 'semantic-ui-react'
+
+import summerPic from './images/summer.jpg'
+import winterPic from './images/winter.jpg'
 
 //CSS
 import './SeasonDisplay.css';
 
 const seasonConfig = {
   summer: {
-    text: "Let's hit the beach!",
+    text: "Let's hit the beach!!",
     iconName: 'sun'
   },
   winter: {
-    text: 'Burr it is cold!',
+    text: "Burrr.. it's cold!!",
     iconName: 'snowflake'
   }
 };
@@ -25,36 +28,41 @@ const getSeason = (lat, month) => {
 
 const SeasonDisplay = props => {
   const season = getSeason(props.lat, new Date().getMonth());
-  console.log(season);
+  // console.log(season);
   const { text, iconName } = seasonConfig[season];
 
   return (
     <div className={`season-display ${season}`}>
       <Card centered raised>
         {/* <i className={`icon-left large  ${iconName} icon`} /> */}
-        <i className={`icon-right large  ${iconName} icon`} />
+        {/* <i className={`icon-right large  ${iconName} icon`} /> */}
 
         {/* Conditional rendering of images acc to season */}
-        {season === 'winter' ? <Image src='https://images.unsplash.com/photo-1529973625058-a665431328fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80' wrapped ui={false} /> : <Image src='https://images.unsplash.com/photo-1614717668397-5252f17ee5b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80'
-          wrapped ui={false} />}
+        {season === 'winter'
+          ? <Image src={winterPic} wrapped ui={false} />
+          : <Image src={summerPic} wrapped ui={false} />}
         {/*  */}
 
         <Card.Content>
           <Card.Header>
-            <span className='season-name'>{season} </span>
+            <span className='season-name'><Icon name={iconName} />{season} </span>
           </Card.Header>
           <Card.Meta>
             {text}
           </Card.Meta>
           <Card.Description>
-            <div>Latitude: {props.lat}</div>
-            <div>Longitude: {props.long}</div>
+            <div>Latitude <Icon name="caret right"></Icon> {props.lat}</div>
+            <div>Longitude<Icon name="caret right"></Icon> {props.long}</div>
           </Card.Description>
         </Card.Content>
-        <Card.Content extra>
-          <Button primary size='small' as='a' href='https://sid-projects.netlify.app/' target='_blank' rel="noreferrer" >
-            About Me
-          </Button>
+        <Card.Content textAlign='center' extra>
+          <div>
+            <Header as='h1'  >
+              <a style={{ color: 'black' }} href='https://sid-projects.netlify.app/' target='_blank' rel="noreferrer" >
+                <span className="footer-name">Sid{" "}</span>
+              </a>
+            </Header>
+          </div>
         </Card.Content>
       </Card>
     </div>
