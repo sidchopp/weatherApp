@@ -11,13 +11,20 @@
 }
 
 .season-display.winter i {
-  color: blue;
+  color: #a2acad;
 }
 
 .season-display.summer i {
-  color: red;
+  color: #00769a;
 }
 
+.season-display.fall i {
+  color: #bf6c3c;
+}
+
+.season-display.spring i {
+  color: #19255a;
+}
 .season-display {
   display: flex;
   justify-content: center;
@@ -30,7 +37,15 @@
 }
 
 .summer {
-  background-color: orange;
+  background-color: #f4d3c4;
+}
+
+.spring {
+  background-color: #ecdf4a;
+}
+
+.fall {
+  background-color: #ffd8a4;
 }
 
 .season-name {
