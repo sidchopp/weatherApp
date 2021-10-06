@@ -22,12 +22,12 @@ const seasonConfig = {
   },
   fall: {
     text: " Autumn leaves shower like gold, like rainbows, as the winds of change begin to blow.",
-    iconName: 'sun',
+    iconName: 'leaf',
     img: `${fallPic}`
   },
   spring: {
     text: "A lovely reminder of how beautiful 'Change' can truly be.",
-    iconName: 'sun',
+    iconName: 'heartbeat ',
     img: `${springPic}`
   },
 };
