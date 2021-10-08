@@ -21,7 +21,7 @@ const seasonConfig = {
     img: `${winterPic}`
   },
   fall: {
-    text: " Autumn leaves shower like gold, like rainbows, as the winds of change begin to blow.",
+    text: " Life starts all over again when it gets crisp in the fall.",
     iconName: 'leaf',
     img: `${fallPic}`
   },
