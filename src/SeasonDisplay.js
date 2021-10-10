@@ -60,7 +60,6 @@ const SeasonDisplay = props => {
           ? <Image src={winterPic} wrapped ui={false} />
           : <Image src={summerPic} wrapped ui={false} />} */}
         {/*  */}
-
         <Image src={img} wrapped ui={false} />
         <Card.Content>
           <Card.Header>
@@ -80,7 +79,7 @@ const SeasonDisplay = props => {
               <Header as='h1'  ><span className="footer-name">Sid{" "}</span>
               </Header>
             </a>
-            {' © '}{new Date().getFullYear()}{'.'}
+            {' © '}{new Date().getFullYear()}{" "}{'Seasons.'}
           </div>
         </Card.Content>
       </Card>
