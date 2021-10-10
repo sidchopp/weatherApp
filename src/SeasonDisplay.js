@@ -76,11 +76,11 @@ const SeasonDisplay = props => {
         </Card.Content>
         <Card.Content textAlign='center' extra>
           <div>
-            <Header as='h1'  >
-              <a style={{ color: 'black' }} href='https://sid-projects.netlify.app/' target='_blank' rel="noreferrer" >
-                <span className="footer-name">Sid{" "}</span>
-              </a>
-            </Header>
+            <a style={{ color: 'black' }} href='https://sid-projects.netlify.app/' target='_blank' rel="noreferrer" >
+              <Header as='h1'  ><span className="footer-name">Sid{" "}</span>
+              </Header>
+            </a>
+            {' © '}{new Date().getFullYear()}{'.'}
           </div>
         </Card.Content>
       </Card>
