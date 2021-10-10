@@ -63,7 +63,14 @@ const SeasonDisplay = props => {
         <Image src={img} wrapped ui={false} />
         <Card.Content>
           <Card.Header>
-            <span className='season-name'><Icon name={iconName} />{season} </span>
+            <div>
+              Enjoy the
+              <span className='season-name'>
+                {" "} {season} {" "}
+                <Icon name={iconName} />
+              </span>
+            </div>
+
           </Card.Header>
           <Card.Meta>
             {text}
