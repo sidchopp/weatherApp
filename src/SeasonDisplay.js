@@ -27,7 +27,7 @@ const seasonConfig = {
   },
   spring: {
     text: "A lovely reminder of how beautiful 'Change' can truly be.",
-    iconName: 'heartbeat ',
+    iconName: 'heartbeat',
     img: `${springPic}`
   },
 };
