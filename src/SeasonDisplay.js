@@ -51,9 +51,9 @@ const SeasonDisplay = props => {
 
   return (
     <div  >
-      <Container className={`season-display ${season}`} style={{ marginTop: "50px", border: "double", padding: '20px' }} text textAlign='center'>
+      <Container className={`season-display ${season} container-main`} text textAlign='center'>
         <Card centered raised  >
-          <div style={{ padding: '12px', marginTop: "20px" }}>
+          <div className="header">
             <Header textAlign='center' as='h2'>
               SEASONS
             </Header>
@@ -61,14 +61,6 @@ const SeasonDisplay = props => {
               This App will show a season based on User's location.
             </Header>
           </div>
-          {/* <i className={`icon-left large  ${iconName} icon`} /> */}
-          {/* <i className={`icon-right large  ${iconName} icon`} /> */}
-
-          {/* Conditional rendering of images acc to season */}
-          {/* {season === 'winter'
-          ? <Image src={winterPic} wrapped ui={false} />
-          : <Image src={summerPic} wrapped ui={false} />} */}
-          {/*  */}
           <Image src={img} wrapped ui={false} />
           <Card.Content>
             <Card.Header>
@@ -79,7 +71,6 @@ const SeasonDisplay = props => {
                   <Icon name={iconName} />
                 </span>
               </div>
-
             </Card.Header>
             <Card.Meta>
               {text}
@@ -91,7 +82,7 @@ const SeasonDisplay = props => {
           </Card.Content>
           <Card.Content textAlign='center' extra>
             <div>
-              <a style={{ color: 'black' }} href='https://sid-projects.netlify.app/' target='_blank' rel="noreferrer" >
+              <a href='https://sid-projects.netlify.app/' target='_blank' rel="noreferrer" >
                 <Header as='h1'  ><span className="footer-name">Sid{" "}</span>
                 </Header>
               </a>
