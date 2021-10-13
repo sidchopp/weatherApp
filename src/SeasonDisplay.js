@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Icon, Image, Header } from 'semantic-ui-react'
+import { Card, Icon, Image, Header, Container } from 'semantic-ui-react'
 
 import summerPic from './images/summer.jpg';
 import winterPic from './images/winter.jpg';
@@ -50,54 +50,56 @@ const SeasonDisplay = props => {
   const { text, iconName, img } = seasonConfig[season];
 
   return (
-    <div className={`season-display ${season}`}>
-      <Card centered raised>
-        <div style={{ padding: '12px' }}>
-          <Header textAlign='center' as='h2'>
-            SEASONS
-          </Header>
-          <Header textAlign='center' as='h4'>
-            This App will show a season based on User's location.
-          </Header>
-        </div>
-        {/* <i className={`icon-left large  ${iconName} icon`} /> */}
-        {/* <i className={`icon-right large  ${iconName} icon`} /> */}
+    <div className={`season-display ${season}`} >
+      <Container style={{ marginTop: "60px" }} text textAlign='center'>
+        <Card centered raised >
+          <div style={{ padding: '12px', marginTop: "30px" }}>
+            <Header textAlign='center' as='h2'>
+              SEASONS
+            </Header>
+            <Header textAlign='center' as='h4'>
+              This App will show a season based on User's location.
+            </Header>
+          </div>
+          {/* <i className={`icon-left large  ${iconName} icon`} /> */}
+          {/* <i className={`icon-right large  ${iconName} icon`} /> */}
 
-        {/* Conditional rendering of images acc to season */}
-        {/* {season === 'winter'
+          {/* Conditional rendering of images acc to season */}
+          {/* {season === 'winter'
           ? <Image src={winterPic} wrapped ui={false} />
           : <Image src={summerPic} wrapped ui={false} />} */}
-        {/*  */}
-        <Image src={img} wrapped ui={false} />
-        <Card.Content>
-          <Card.Header>
-            <div>
-              Enjoy the
-              <span className='season-name'>
-                {" "} {season} {" "}
-                <Icon name={iconName} />
-              </span>
-            </div>
+          {/*  */}
+          <Image src={img} wrapped ui={false} />
+          <Card.Content>
+            <Card.Header>
+              <div>
+                Enjoy the
+                <span className='season-name'>
+                  {" "} {season} {" "}
+                  <Icon name={iconName} />
+                </span>
+              </div>
 
-          </Card.Header>
-          <Card.Meta>
-            {text}
-          </Card.Meta>
-          <Card.Description>
-            <div>Latitude <Icon name="caret right"></Icon> {props.lat}</div>
-            <div>Longitude<Icon name="caret right"></Icon> {props.long}</div>
-          </Card.Description>
-        </Card.Content>
-        <Card.Content textAlign='center' extra>
-          <div>
-            <a style={{ color: 'black' }} href='https://sid-projects.netlify.app/' target='_blank' rel="noreferrer" >
-              <Header as='h1'  ><span className="footer-name">Sid{" "}</span>
-              </Header>
-            </a>
-            {' © '}{new Date().getFullYear()}{" "}{'Seasons.'}
-          </div>
-        </Card.Content>
-      </Card>
+            </Card.Header>
+            <Card.Meta>
+              {text}
+            </Card.Meta>
+            <Card.Description>
+              <div>Latitude <Icon name="caret right"></Icon> {props.lat}</div>
+              <div>Longitude<Icon name="caret right"></Icon> {props.long}</div>
+            </Card.Description>
+          </Card.Content>
+          <Card.Content textAlign='center' extra>
+            <div>
+              <a style={{ color: 'black' }} href='https://sid-projects.netlify.app/' target='_blank' rel="noreferrer" >
+                <Header as='h1'  ><span className="footer-name">Sid{" "}</span>
+                </Header>
+              </a>
+              {' © '}{new Date().getFullYear()}{" "}{'Seasons.'}
+            </div>
+          </Card.Content>
+        </Card>
+      </Container>
     </div>
   );
 };
