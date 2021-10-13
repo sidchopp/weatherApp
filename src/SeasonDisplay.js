@@ -50,10 +50,10 @@ const SeasonDisplay = props => {
   const { text, iconName, img } = seasonConfig[season];
 
   return (
-    <div className={`season-display ${season}`} >
-      <Container style={{ marginTop: "60px" }} text textAlign='center'>
-        <Card centered raised >
-          <div style={{ padding: '12px', marginTop: "30px" }}>
+    <div  >
+      <Container className={`season-display ${season}`} style={{ marginTop: "50px", border: "double", padding: '20px' }} text textAlign='center'>
+        <Card centered raised  >
+          <div style={{ padding: '12px', marginTop: "20px" }}>
             <Header textAlign='center' as='h2'>
               SEASONS
             </Header>
