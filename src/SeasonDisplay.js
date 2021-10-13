@@ -52,6 +52,14 @@ const SeasonDisplay = props => {
   return (
     <div className={`season-display ${season}`}>
       <Card centered raised>
+        <div style={{ padding: '12px' }}>
+          <Header textAlign='center' as='h2'>
+            SEASONS
+          </Header>
+          <Header textAlign='center' as='h4'>
+            This App will show a season based on User's location.
+          </Header>
+        </div>
         {/* <i className={`icon-left large  ${iconName} icon`} /> */}
         {/* <i className={`icon-right large  ${iconName} icon`} /> */}
 
