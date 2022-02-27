@@ -86,7 +86,10 @@ const SeasonDisplay = props => {
                 <Header as='h1'  ><span className="footer-name">Sid{" "}</span>
                 </Header>
               </a>
-              {' © '}{new Date().getFullYear()}{" "}{'Seasons.'}
+              {' © '}{'Seasons.'}{' '}
+              <i>
+                2021-{new Date().getFullYear()}
+              </i>
             </div>
           </Card.Content>
         </Card>
